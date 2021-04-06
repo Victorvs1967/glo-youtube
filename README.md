@@ -1,5 +1,8 @@
 # Learning Poject
-
+Probe web application aka Youtube
 ## Youtube Concept
 
-Probe web application aka Youtube
+- html;
+- css;
+- SVG Sprites;
+
