@@ -118,11 +118,11 @@ body {
     line-height: 20px;
     color: #898989;
 }
-.menu-icon:hover {
-    fill: red;
-}
-.menu-item:hover {
+.nav-link:hover .menu-item {
     color: red;
+}
+.nav-link:hover .menu-icon{
+    fill: red;
 }
 .subscription {
     font-weight: 400;
