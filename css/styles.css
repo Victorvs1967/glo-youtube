@@ -21,7 +21,7 @@ body {
     width: 20px;
     border: none;
     background-color: #fff;
-    margin-right: 28px;
+    margin-right: 32px;
     cursor: pointer;
 }
 .menu-line {
@@ -95,7 +95,7 @@ body {
 }
 .menu {
     min-width: 180px;
-    margin-left: 50px;
+    margin-left: 32px;
     margin-right: 65px;
 }
 .nav-menu {
