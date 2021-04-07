@@ -38,7 +38,7 @@ body {
 .search-group {
     height: 44px;
     max-width: 830px;
-    width: 50%;
+    width: 60%;
     padding: 0 20px;
     background: #EBEBEB;
     mix-blend-mode: normal;
@@ -51,7 +51,7 @@ body {
 .search-input {
     background: none;
     border: none;
-    width: 80%;
+    width: 100%;
     font-weight: 200;
     font-size: 16px;
     line-height: 20px;
@@ -98,10 +98,12 @@ body {
     margin-left: 50px;
     margin-right: 65px;
 }
-.menu-group {
-    margin-bottom: 60px;
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 60px 0;
 }
-.menu-link {
+.nav-link {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -129,6 +131,11 @@ body {
     color: #000000;
     margin-bottom: 30px;
 }
+.subs-avatar {
+    margin-right: 10px;
+    height: 26px;
+    width: 26px;
+}
 .video-box {
     overflow: hidden;
 }
@@ -141,12 +148,21 @@ body {
 .big-line {
     margin-bottom: 50px;
 }
+.line-header {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+.line-header img {
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+}
 .line-title {
     font-weight: 500;
     font-size: 26px;
     line-height: 33px;
     color: #19202C;
-    margin-bottom: 30px;
 }
 .small-card {
     height: 200px;
