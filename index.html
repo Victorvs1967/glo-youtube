@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glo Youtube</title>
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./node_modules/swiper/swiper-bundle.min.js" defer></script>
     <script src="./js/main.js" defer></script>
 </head>
 <body>
@@ -194,9 +196,10 @@
                     </a>
                 </div>
         </aside>
-        <div class="video-box">
-            <div class="small-line">
-                <div class="line-header">
+        <div class="content">
+            <!-- Slider main container -->
+            <div class="swiper-container small-line">
+                    <div class="line-header">
                     <div class="video-user">
                         <a href="#" class="line-link">
                             <img src="./image/dollie.png" alt="user" class="user-avatar">
@@ -204,38 +207,37 @@
                         <a href="#" class="line-link">
                             <span class="line-title">Dollie Blair</span>
                         </a>
-                        </div>
+                    </div>                    
+                    <!-- If we need navigation buttons -->                
+                    <!-- If we need navigation buttons -->                
                     <div class="arrows">
-                        <a href="#" class="nav-link">
-                            <svg class="icon menu-icon" width="28px" height="28px">
-                                <use xlink:href="./image/icons.svg#left"></use>
-                            </svg>             
-                        </a>
-                        <a href="#" class="nav-link">
-                            <svg class="icon menu-icon" width="28px" height="28px">
-                                <use xlink:href="./image/icons.svg#right"></use>
-                            </svg>             
-                        </a>
+                        <svg class="icon prev" width="28px" height="28px">
+                            <use xlink:href="./image/icons.svg#left"></use>
+                        </svg>             
+                        <svg class="icon next" width="28px" height="28px">
+                            <use xlink:href="./image/icons.svg#right"></use>
+                        </svg>             
                     </div>
                 </div>
-                <div class="video-line">
-                    <div class="small-card">
-                            <img src="./image/brife.png" alt="video" class="small-video">
-                            <p class="subtitle">A Brief History Of Creation</p>
-                            <div class="video-info">
-                                <span class="description">80k views · 3 days ago</span>
-                                <span class="description">Dollie Blair</span>
-                            </div>
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper video-line">
+                    <div class="small-card swiper-slide">
+                        <img src="./image/brife.png" alt="video" class="small-video">
+                        <p class="subtitle">A Brief History Of Creation</p>
+                        <div class="video-info">
+                            <span class="description">80k views · 3 days ago</span>
+                            <span class="description">Dollie Blair</span>
+                        </div>
                     </div>
-                    <div class="small-card">
-                            <img src="./image/selecting.png" alt="video" class="small-video">
-                            <p class="subtitle">Selecting The Right Hotel</p>
-                            <div class="video-info">
-                                <span class="description">123k views · 1 months ago</span>
-                                <span class="description">Dollie Blair</span>
-                            </div>
+                    <div class="small-card swiper-slide">
+                        <img src="./image/selecting.png" alt="video" class="small-video">
+                        <p class="subtitle">Selecting The Right Hotel</p>
+                        <div class="video-info">
+                            <span class="description">123k views · 1 months ago</span>
+                            <span class="description">Dollie Blair</span>
+                        </div>
                     </div>
-                    <div class="small-card">
+                    <div class="small-card swiper-slide">
                             <img src="./image/asteroid.png" alt="video" class="small-video">
                             <p class="subtitle">Asteroids</p>
                             <div class="video-info">
@@ -243,7 +245,7 @@
                                 <span class="description">Dollie Blair</span>
                             </div>
                     </div>
-                    <div class="small-card">
+                    <div class="small-card swiper-slide">
                             <img src="./image/telescopes.png" alt="video" class="small-video">
                             <p class="subtitle">Telescopes 101</p>
                             <div class="video-info">
@@ -251,7 +253,7 @@
                                 <span class="description">Dollie Blair</span>
                             </div>
                     </div>
-                    <div class="small-card">
+                    <div class="small-card swiper-slide">
                             <img src="./image/medical.png" alt="video" class="small-video">
                             <p class="subtitle">Medical Care Is Just</p>
                             <div class="video-info">
@@ -259,7 +261,7 @@
                                 <span class="description">Dollie Blair</span>
                             </div>
                     </div>
-                    <div class="small-card">
+                    <div class="small-card swiper-slide">
                             <img src="./image/moon.png" alt="video" class="small-video">
                             <p class="subtitle">Moon Gazing</p>
                             <div class="video-info">
@@ -269,28 +271,28 @@
                     </div>
                 </div>
             </div>
-            <div class="big-line">
+            <!-- /.swiper-container -->
+            <!-- Slider main container -->
+            <div class="swiper-container big-line">
                 <div class="line-header">
                     <div class="video-user">
                         <a href="#" class="line-link">
                             <span class="line-title">Recommended</span>
                         </a>
                     </div>
+                    <!-- If we need navigation buttons -->                
                     <div class="arrows">
-                        <a href="#" class="nav-link">
-                            <svg class="icon menu-icon" width="28px" height="28px">
-                                <use xlink:href="./image/icons.svg#left"></use>
-                            </svg>             
-                        </a>
-                        <a href="#" class="nav-link">
-                            <svg class="icon menu-icon" width="28px" height="28px">
-                                <use xlink:href="./image/icons.svg#right"></use>
-                            </svg>             
-                        </a>
+                        <svg class="icon prev" width="28px" height="28px">
+                            <use xlink:href="./image/icons.svg#left"></use>
+                        </svg>             
+                        <svg class="icon next" width="28px" height="28px">
+                            <use xlink:href="./image/icons.svg#right"></use>
+                        </svg>             
                     </div>
                 </div>
-                <div class="video-line">
-                    <div class="big-card">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper video-line">
+                    <div class="big-card swiper-slide">
                         <img src="./image/dude.png" alt="video" class="big-video">
                         <p class="subtitle">Dude You Re Getting A Telescope</p>
                             <div class="video-info">
@@ -298,7 +300,7 @@
                                 <span class="description">Gussie French</span>
                             </div>
                     </div>
-                    <div class="big-card">
+                    <div class="big-card swiper-slide">
                         <img src="./image/moon-man.png" alt="video" class="big-video">
                         <p class="subtitle">Moon Gazing</p>
                             <div class="video-info">
@@ -306,7 +308,7 @@
                                 <span class="description">Edward Osborne</span>
                             </div>
                     </div>
-                    <div class="big-card">
+                    <div class="big-card swiper-slide">
                         <img src="./image/moon-women.png" alt="video" class="big-video">
                         <p class="subtitle">Moon Gazing</p>
                             <div class="video-info">
@@ -315,8 +317,10 @@
                             </div>
                     </div>
                 </div>
-                </div>
-            <div class="small-line">
+            </div>
+            <!-- /.swiper-container -->
+            <!-- Slider main container -->
+            <div class="swiper-container small-line">
                 <div class="line-header">
                     <div class="video-user">
                         <a href="#" class="line-link">
@@ -329,72 +333,69 @@
                             <span class="recomended-text">Recommended channel for you</span>
                         </div>
                     </div>                       
+                    <!-- If we need navigation buttons -->                
                     <div class="arrows">
-                        <a href="#" class="nav-link">
-                            <svg class="icon menu-icon" width="28px" height="28px">
-                                <use xlink:href="./image/icons.svg#left"></use>
-                            </svg>             
-                        </a>
-                        <a href="#" class="nav-link">
-                            <svg class="icon menu-icon" width="28px" height="28px">
-                                <use xlink:href="./image/icons.svg#right"></use>
-                            </svg>             
-                        </a>
+                        <svg class="icon prev" width="28px" height="28px">
+                            <use xlink:href="./image/icons.svg#left"></use>
+                        </svg>             
+                        <svg class="icon next" width="28px" height="28px">
+                            <use xlink:href="./image/icons.svg#right"></use>
+                        </svg>             
                     </div>
                 </div>
-                <div class="small-card">
-                    <div class="video-line">
-                        <div class="small-card">
-                            <img src="./image/brife.png" alt="video" class="small-video">
-                            <p class="subtitle">Astronomy Or Astrology</p>
-                            <div class="video-info">
-                                <span class="description">240k views · 4 months ago</span>
-                                <span class="description">Food & Drink</span>
-                            </div>
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper video-line">
+                    <div class="small-card swiper-slide">
+                        <img src="./image/brife.png" alt="video" class="small-video">
+                        <p class="subtitle">Astronomy Or Astrology</p>
+                        <div class="video-info">
+                            <span class="description">240k views · 4 months ago</span>
+                            <span class="description">Food & Drink</span>
                         </div>
-                        <div class="small-card">
-                            <img src="./image/selecting.png" alt="video" class="small-video">
-                            <p class="subtitle">Advertising Outdoors</p>
-                            <div class="video-info">
-                                <span class="description">13k views · 15 days ago</span>
-                                <span class="description">Food & Drink</span>
-                            </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <img src="./image/selecting.png" alt="video" class="small-video">
+                        <p class="subtitle">Advertising Outdoors</p>
+                        <div class="video-info">
+                            <span class="description">13k views · 15 days ago</span>
+                            <span class="description">Food & Drink</span>
                         </div>
-                        <div class="small-card">
-                            <img src="./image/asteroid.png" alt="video" class="small-video">
-                            <p class="subtitle">Radio Astronomy</p>
-                            <div class="video-info">
-                                <span class="description">1k views · 11 months ago</span>
-                                <span class="description">Food & Drink</span>
-                            </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <img src="./image/asteroid.png" alt="video" class="small-video">
+                        <p class="subtitle">Radio Astronomy</p>
+                        <div class="video-info">
+                            <span class="description">1k views · 11 months ago</span>
+                            <span class="description">Food & Drink</span>
                         </div>
-                        <div class="small-card">
-                            <img src="./image/telescopes.png" alt="video" class="small-video">
-                            <p class="subtitle">A Good Autoresponder</p>
-                            <div class="video-info">
-                                <span class="description">45k views · 2 months ago</span>
-                                <span class="description">Food & Drink</span>
-                            </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <img src="./image/telescopes.png" alt="video" class="small-video">
+                        <p class="subtitle">A Good Autoresponder</p>
+                        <div class="video-info">
+                            <span class="description">45k views · 2 months ago</span>
+                            <span class="description">Food & Drink</span>
                         </div>
-                        <div class="small-card">
-                            <img src="./image/medical.png" alt="video" class="small-video">
-                            <p class="subtitle">Baby Monitor Technology</p>
-                            <div class="video-info">
-                                <span class="description">86k views · 7 days ago</span>
-                                <span class="description">Food & Drink</span>
-                            </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <img src="./image/medical.png" alt="video" class="small-video">
+                        <p class="subtitle">Baby Monitor Technology</p>
+                        <div class="video-info">
+                            <span class="description">86k views · 7 days ago</span>
+                            <span class="description">Food & Drink</span>
                         </div>
-                        <div class="small-card">
-                            <img src="./image/moon.png" alt="video" class="small-video">
-                            <p class="subtitle">Asteroids</p>
-                            <div class="video-info">
-                                <span class="description">123k views · 4 months ago</span>
-                                <span class="description">Food & Drink</span>
-                            </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <img src="./image/moon.png" alt="video" class="small-video">
+                        <p class="subtitle">Asteroids</p>
+                        <div class="video-info">
+                            <span class="description">123k views · 4 months ago</span>
+                            <span class="description">Food & Drink</span>
                         </div>
-                    </div>    
-                </div>
+                    </div>
+                </div>    
             </div>
+            <!-- /.swiper-container -->
         </div>
     </main>
 </body>
