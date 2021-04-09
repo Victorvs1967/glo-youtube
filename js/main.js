@@ -2,6 +2,7 @@ const swiper = new Swiper('.swiper-container', {
     direction: 'vertical',
     slidesPerView: 'auto',
     spaceBetween: 20,
+    loop: false,
     // Navigation arrows
     navigation: {
         nextEl: '.next',

@@ -182,6 +182,18 @@ body {
     line-height: 33px;
     color: #19202C;
 }
+.subscribers {
+    padding: 10px 20px;
+    background: #FF0000;
+    border-radius: 20px;    
+}
+.subscribers-text {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
 .arrows {
     display: flex;
     align-items: center;
@@ -268,17 +280,20 @@ body {
     vertical-align: middle;
     margin: 0 3px 0 5px;
 }
+
 .mobile-sidebar {
     display: none;
 }
 .mobile-search {
     display: none;
 }
+
 @media (max-width: 860px) {
     .icons {
         display: none;
     }
 }
+
 @media (max-width: 640px) {
     .menu-button {
         display: none;
