@@ -26,7 +26,11 @@ const searchBtn = document.querySelector('.mobile-search'),
         content = document.querySelector('.content');
 
 searchBtn.addEventListener('click', () => mobileSearch.classList.toggle('is-open'));
-content.addEventListener('click', () => mobileSearch.classList.toggle('is-open'));
+content.addEventListener('click', () => {
+    if (mobileSearch.classList.contains('is-open')) {
+        mobileSearch.classList.toggle('is-open');
+    }
+});
 menuButton.addEventListener('click', () => {
     menu.classList.toggle('visible');
     content.classList.toggle('visible');
