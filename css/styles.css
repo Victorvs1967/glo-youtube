@@ -110,16 +110,13 @@ body {
     position: fixed;
     top: 114px;
     left: -200px;
+    transition: left 0.2s;
     height: calc(100% - 114px);
     overflow-y: auto;
 }
 .menu.visible {
     left: 0;
     transition: left 0.2s;
-}
-.content.visible {
-    padding-left: 200px;
-    transition: padding-left 0.2s;
 }
 .nav-menu {
     list-style: none;
@@ -161,6 +158,12 @@ body {
 }
 .content {
     overflow: hidden;
+    padding-left: 0;
+    transition: padding-left 0.25s;
+}
+.content.visible {
+    padding-left: 200px;
+    transition: padding-left 0.25s;
 }
 .video-line {
     display: flex;
