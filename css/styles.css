@@ -100,7 +100,7 @@ body {
     border-radius: 50%;
 }
 .container {
-    padding: 114px 0 0 230px;
+    padding: 114px 0 0 30px;
     display: flex;
 }
 .menu {
@@ -109,9 +109,17 @@ body {
     margin-right: 65px;
     position: fixed;
     top: 114px;
-    left: 0;
+    left: -200px;
     height: calc(100% - 114px);
     overflow-y: auto;
+}
+.menu.visible {
+    left: 0;
+    transition: left 0.2s;
+}
+.content.visible {
+    padding-left: 200px;
+    transition: padding-left 0.2s;
 }
 .nav-menu {
     list-style: none;

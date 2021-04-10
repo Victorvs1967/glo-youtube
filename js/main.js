@@ -21,10 +21,15 @@ const swiper = new Swiper('.swiper-container', {
 
 const searchBtn = document.querySelector('.mobile-search'),
         mobileSearch = document.querySelector('.search-group'),
-        body = document.querySelector('body');
+        menuButton = document.querySelector('.menu-button'),
+        menu = document.querySelector('.menu'),
+        content = document.querySelector('.content');
 
 searchBtn.addEventListener('click', () => {
     mobileSearch.classList.toggle('is-open');
 });
 
-
+menuButton.addEventListener('click', () => {
+    menu.classList.toggle('visible');
+    content.classList.toggle('visible');
+});
