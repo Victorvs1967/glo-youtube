@@ -1,89 +1,542 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.3.3/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.3.3/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glo Youtube</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/swiper-bundle.min.js" defer></script>
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <button class="menu-button">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </button>
+        <div class="logo-youtube"><img src="./image/logo.svg" alt="logo-youtube" class="logo-img"></div>
+        <div class="search-group">
+            <input type="search" class="search-input" placeholder="Search">
+            <button class="search-button">
+                <svg class="icon search-icon" width="19px" height="19px">
+                    <use xlink:href="./image/icons.svg#search-icon"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-search">
+            <button class="search-button">
+                <svg class="icon search-icon" width="19px" height="19px">
+                    <use xlink:href="./image/icons.svg#search-icon"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="icons-group">
+            <div class="icons">
+                <a href="#" class="icons-link">
+                    <svg class="icon icon-photo" width="27px" height="20px">
+                        <use xlink:href="./image/icons.svg#photo-icon"></use>
+                    </svg>
+                </a>
+                <a href="#" class="icons-link">
+                    <svg class="icon icon-dots" width="21px" height="21px">
+                        <use xlink:href="./image/icons.svg#dots-icon"></use>
+                    </svg>
+                </a>
+                <a href="#" class="icons-link">
+                    <svg class="icon icon-bell" width="22px" height="29px">
+                        <use xlink:href="./image/icons.svg#bell-icon"></use>
+                    </svg>
+                </a>
+            </div>
+            <a href="#" class="icons-link user">
+                <img src="./image/me.png" alt="user" class="user-avatar">
+            </a>
+        </div>
+        <!-- /.icons-group -->
+    </header>
+    <!-- /.header -->
+    <div class="mobile-sidebar">
+        <nav class="menu-group" aria-labelledby="navigation">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <svg class="icon menu-icon" width="20px" height="20px">
+                            <use xlink:href="./image/icons.svg#home"></use>
+                        </svg>             
+                        <span class="menu-item">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <svg class="icon menu-icon" width="20px" height="20px">
+                            <use xlink:href="./image/icons.svg#fire"></use>
+                        </svg>             
+                        <span class="menu-item">Trending</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <svg class="icon menu-icon" width="20px" height="20px">
+                            <use xlink:href="./image/icons.svg#subscription"></use>
+                        </svg>             
+                        <span class="menu-item">Subscription</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <svg class="icon menu-icon" width="20px" height="20px">
+                            <use xlink:href="./image/icons.svg#folder"></use>
+                        </svg>             
+                        <span class="menu-item">Library</span>
+                    </a>
+                </li>
+        </ul>
+        </nav>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <!-- /.mobile-sidebar -->
+    <main class="container">
+        <aside class="menu">
+            <nav class="menu-group" aria-labelledby="navigation">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg class="icon menu-icon" width="20px" height="20px">
+                                <use xlink:href="./image/icons.svg#home"></use>
+                            </svg>             
+                            <span class="menu-item">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg class="icon menu-icon" width="20px" height="20px">
+                                <use xlink:href="./image/icons.svg#fire"></use>
+                            </svg>             
+                            <span class="menu-item">Trending</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg class="icon menu-icon" width="20px" height="20px">
+                                <use xlink:href="./image/icons.svg#subscription"></use>
+                            </svg>             
+                            <span class="menu-item">Subscription</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg class="icon menu-icon" width="20px" height="20px">
+                                <use xlink:href="./image/icons.svg#folder"></use>
+                            </svg>             
+                            <span class="menu-item">Library</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg class="icon menu-icon" width="20px" height="20px">
+                                <use xlink:href="./image/icons.svg#paper"></use>
+                            </svg>             
+                            <span class="menu-item">History</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg class="icon menu-icon" width="20px" height="20px">
+                                <use xlink:href="./image/icons.svg#watch"></use>
+                            </svg>             
+                            <span class="menu-item">Watch later</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg class="icon menu-icon" width="20px" height="20px">
+                                <use xlink:href="./image/icons.svg#star"></use>
+                            </svg>             
+                            <span class="menu-item">Favourites</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg class="icon menu-icon" width="20px" height="20px">
+                                <use xlink:href="./image/icons.svg#heart"></use>
+                            </svg>             
+                            <span class="menu-item">Liked videos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg class="icon menu-icon" width="20px" height="20px">
+                                <use xlink:href="./image/icons.svg#music"></use>
+                            </svg>             
+                            <span class="menu-item">Music</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg class="icon menu-icon" width="20px" height="20px">
+                                <use xlink:href="./image/icons.svg#game"></use>
+                            </svg>             
+                            <span class="menu-item">Games</span>
+                        </a>
+                    </li>
+                    <li class="nav-item show-more">
+                        <a href="#" class="nav-link">
+                            <svg class="icon menu-icon" width="20px" height="20px">
+                                <use xlink:href="./image/icons.svg#angle"></use>
+                            </svg>             
+                            <span class="menu-item">Show more</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="subscription">
+                <p class="subscription-title">Subscriptions</p>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="./image/dollie.png" alt="user" class="user-avatar subs-avatar">
+                            <span class="menu-item">Gussie Singleton</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="./image/nora.png" alt="user" class="user-avatar subs-avatar">
+                            <span class="menu-item">Nora Francis</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="./image/belle.png" alt="user" class="user-avatar subs-avatar">
+                            <span class="menu-item">Belle Briggs</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="./image/euice.png" alt="user" class="user-avatar subs-avatar">
+                            <span class="menu-item">Eunice Cortez</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="./image/emma.png" alt="user" class="user-avatar subs-avatar">
+                            <span class="menu-item">Emma Hanson</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="./image/leah.png" alt="user" class="user-avatar subs-avatar">
+                            <span class="menu-item">Leah Berry</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="setting">
+                    <a href="#" class="nav-link">
+                        <svg class="icon menu-icon" width="20px" height="20px">
+                            <use xlink:href="./image/icons.svg#gear"></use>
+                        </svg>             
+                        <span class="menu-item">Setting</span>
+                    </a>
+                </div>
+        </aside>
+        <div class="content">
+            <!-- Slider main container -->
+            <div class="swiper-container small-line">
+                    <div class="line-header">
+                    <div class="video-user">
+                        <a href="#" class="line-link">
+                            <img src="./image/dollie.png" alt="user" class="user-avatar">
+                        </a>
+                        <a href="#" class="line-link">
+                            <span class="line-title">Dollie Blair</span>
+                        </a>
+                    </div>                    
+                    <!-- If we need navigation buttons -->                
+                    <div class="arrows">
+                        <svg class="icon prev" width="28px" height="28px">
+                            <use xlink:href="./image/icons.svg#left"></use>
+                        </svg>             
+                        <svg class="icon next" width="28px" height="28px">
+                            <use xlink:href="./image/icons.svg#right"></use>
+                        </svg>             
+                    </div>
+                </div>
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper video-line">
+                    <div class="small-card swiper-slide">
+                        <div class="video-thumb">
+                            <img src="./image/brife.png" alt="video" class="small-video">
+                            <span class="video-duration">4:15</span>
+                        </div>
+                        <p class="subtitle">A Brief History Of Creation</p>
+                        <div class="video-info">
+                            <span class="video-counter">
+                                <span class="video-views">80k views</span>
+                                <span class="video-date">3 days ago</span>
+                            </span>
+                            <span class="video-channel">Dollie Blair</span>
+                        </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <div class="video-thumb">
+                            <img src="./image/selecting.png" alt="video" class="small-video">
+                            <span class="video-duration">8:00</span>
+                        </div>
+                        <p class="subtitle">Selecting The Right Hotel</p>
+                        <div class="video-info">
+                            <span class="video-counter">
+                                <span class="video-views">123k views</span>
+                                <span class="video-date">1 months ago</span>
+                            </span>
+                            <span class="video-channel">Dollie Blair</span>
+                        </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <div class="video-thumb">
+                            <img src="./image/asteroid.png" alt="video" class="small-video">
+                            <span class="video-duration">5:32</span>
+                        </div>
+                        <p class="subtitle">Asteroids</p>
+                        <div class="video-info">
+                        <span class="video-counter">
+                                <span class="video-views">43k views</span>
+                                <span class="video-date">12 days ago</span>
+                            </span>
+                            <span class="video-channel">Dollie Blair</span>
+                        </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <div class="video-thumb">
+                            <img src="./image/telescopes.png" alt="video" class="small-video">
+                            <span class="video-duration">6:40</span>
+                        </div>
+                        <p class="subtitle">Telescopes 101</p>
+                        <div class="video-info">
+                            <span class="video-counter">
+                                <span class="video-views">11k views</span>
+                                <span class="video-date">6 months ago</span>
+                            </span>
+                            <span class="video-channel">Dollie Blair</span>
+                        </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <div class="video-thumb">
+                            <img src="./image/medical.png" alt="video" class="small-video">
+                            <span class="video-duration">1:45</span>
+                        </div>
+                        <p class="subtitle">Medical Care Is Just</p>
+                        <div class="video-info">
+                            <span class="video-counter">
+                                <span class="video-views">18k views</span>
+                                <span class="video-date">2 days ago</span>
+                            </span>
+                            <span class="video-channel">Dollie Blair</span>
+                        </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <div class="video-thumb">
+                            <img src="./image/moon.png" alt="video" class="small-video">
+                            <span class="video-duration">2:15</span>
+                        </div>
+                        <p class="subtitle">Moon Gazing</p>
+                        <div class="video-info">
+                            <span class="video-counter">
+                                <span class="video-views">67k views</span>
+                                <span class="video-date">4 months ago</span>
+                            </span>
+                            <span class="video-channel">Dollie Blair</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.swiper-container -->
+            <!-- Slider main container -->
+            <div class="swiper-container big-line">
+                <div class="line-header">
+                    <div class="video-user">
+                        <a href="#" class="line-link">
+                            <span class="line-title">Recommended</span>
+                        </a>
+                    </div>
+                    <!-- If we need navigation buttons -->                
+                    <div class="arrows">
+                        <svg class="icon prev" width="28px" height="28px">
+                            <use xlink:href="./image/icons.svg#left"></use>
+                        </svg>             
+                        <svg class="icon next" width="28px" height="28px">
+                            <use xlink:href="./image/icons.svg#right"></use>
+                        </svg>             
+                    </div>
+                </div>
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper video-line">
+                    <div class="big-card swiper-slide">
+                        <div class="video-thumb">
+                            <img src="./image/dude.png" alt="video" class="big-video">
+                            <span class="video-duration">3:40</span>
+                        </div>
+                        <p class="subtitle">Dude You Re Getting A Telescope</p>
+                        <div class="video-info">
+                            <span class="video-counter">
+                                    <span class="video-views">34k views</span>
+                                    <span class="video-date">5 months ago</span>
+                            </span>
+                            <span class="video-channel">Gussie French</span>
+                        </div>
+                    </div>
+                    <div class="big-card swiper-slide">
+                        <div class="video-thumb">
+                            <img src="./image/moon-man.png" alt="video" class="big-video">
+                            <span class="video-duration">2:12</span>
+                        </div>
+                        <p class="subtitle">Moon Gazing</p>
+                        <div class="video-info">
+                            <span class="video-counter">
+                                <span class="video-views">54k views</span>
+                                <span class="video-date">11 months ago</span>
+                            </span>
+                            <span class="video-channel">Edward Osborne</span>
+                        </div>
+                    </div>
+                    <div class="big-card swiper-slide">
+                        <div class="video-thumb">
+                            <img src="./image/moon-women.png" alt="video" class="big-video">
+                            <span class="video-duration">2:15</span>
+                        </div>
+                        <p class="subtitle">Moon Gazing</p>
+                        <div class="video-info">
+                            <span class="video-counter">
+                                <span class="video-views">125k views</span>
+                                <span class="video-date">4 months ago</span>
+                            </span>
+                            <span class="video-channel">Dollie Blair</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.swiper-container -->
+            <!-- Slider main container -->
+            <div class="swiper-container small-line">
+                <div class="line-header">
+                    <div class="video-user">
+                        <a href="#" class="line-link">
+                            <img src="./image/food.png" alt="user" class="user-avatar">
+                        </a>
+                        <div class="title-blok">
+                            <a href="#" class="line-link">
+                                <span class="line-title">Food & Drink</span>
+                            </a>
+                            <span class="recomended-text">Recommended channel for you</span>
+                        </div>
+                    </div>
+                    <div class="subscribers">
+                        <span class="subscribers-text">Subscribe 2.3m</span>
+                    </div>                      
+                    <!-- If we need navigation buttons -->                
+                    <div class="arrows">
+                        <svg class="icon prev" width="28px" height="28px">
+                            <use xlink:href="./image/icons.svg#left"></use>
+                        </svg>             
+                        <svg class="icon next" width="28px" height="28px">
+                            <use xlink:href="./image/icons.svg#right"></use>
+                        </svg>             
+                    </div>
+                </div>
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper video-line">
+                    <div class="small-card swiper-slide">
+                        <div class="video-thumb">
+                        <img src="./image/astronomy.png" alt="video" class="small-video">
+                            <span class="video-duration">2:15</span>
+                        </div>
+                        <p class="subtitle">Astronomy Or Astrology</p>
+                        <div class="video-info">
+                            <span class="video-counter">
+                                <span class="video-views">240k views</span>
+                                <span class="video-date">4 months ago</span>
+                            </span>
+                            <span class="video-channel">Food & Drink</span>
+                        </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <div class="video-thumb">
+                        <img src="./image/advertising.png" alt="video" class="small-video">
+                            <span class="video-duration">2:15</span>
+                        </div>
+                        <p class="subtitle">Advertising Outdoors</p>
+                        <div class="video-info">
+                            <span class="video-counter">
+                                <span class="video-views">13k views</span>
+                                <span class="video-date">15 days ago</span>
+                            </span>
+                            <span class="video-channel">Food & Drink</span>
+                        </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <div class="video-thumb">
+                        <img src="./image/кadio.png" alt="video" class="small-video">
+                            <span class="video-duration">2:15</span>
+                        </div>
+                        <p class="subtitle">Radio Astronomy</p>
+                        <div class="video-info">
+                            <span class="video-counter">
+                                <span class="video-views">1k views</span>
+                                <span class="video-date">11 months ago</span>
+                            </span>
+                            <span class="video-channel">Food & Drink</span>
+                        </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <div class="video-thumb">
+                        <img src="./image/good.png" alt="video" class="small-video">
+                            <span class="video-duration">2:15</span>
+                        </div>
+                        <p class="subtitle">A Good Autoresponder</p>
+                        <div class="video-info">                            
+                            <span class="video-counter">
+                                <span class="video-views">45k views</span>
+                                <span class="video-date">2 months ago</span>
+                            </span>
+                            <span class="video-channel">Food & Drink</span>
+                        </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <div class="video-thumb">
+                        <img src="./image/иaby.png" alt="video" class="small-video">
+                            <span class="video-duration">2:15</span>
+                        </div>
+                        <p class="subtitle">Baby Monitor Technology</p>
+                        <div class="video-info">
+                            <span class="video-counter">
+                                <span class="video-views">86k views</span>
+                                <span class="video-date">7 days ago</span>
+                            </span>
+                            <span class="video-channel">Food & Drink</span>
+                        </div>
+                    </div>
+                    <div class="small-card swiper-slide">
+                        <div class="video-thumb">
+                        <img src="./image/melou.png" alt="video" class="small-video">
+                            <span class="video-duration">2:15</span>
+                        </div>
+                        <p class="subtitle">Asteroids</p>
+                        <div class="video-info">
+                            <span class="video-counter">
+                                <span class="video-views">123k views</span>
+                                <span class="video-date">4 months ago</span>
+                            </span>
+                            <span class="video-channel">Food & Drink</span>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <!-- /.swiper-container -->
+        </div>
+    </main>
+</body>
 </html>
